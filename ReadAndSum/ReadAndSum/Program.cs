@@ -13,7 +13,7 @@ namespace ReadAndSum
             int summ;
            
                 Console.WriteLine("Number one");
-                numberOne = int.Parse(Console.ReadLine()); ;
+                numberOne = int.Parse(Console.ReadLine());
                 Console.WriteLine("Number two");
                 numberTwo = int.Parse(Console.ReadLine());
                 summ = numberOne + numberTwo;
