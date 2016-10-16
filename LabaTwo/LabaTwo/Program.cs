@@ -10,22 +10,11 @@ namespace LabaTwo
     {
         static void Main(string[] args)
         {
-            int A, B, C;
-            int max;
+            int A, B, C;            
             if (int.TryParse(Console.ReadLine(), out A) && int.TryParse(Console.ReadLine(), out B) && int.TryParse(Console.ReadLine(), out C))
             {
-                if (A >= B)
-                {
-                    max = A;
-                }
-                else
-                {
-                    max = B;
-                };
-                if (C >= max) 
-                {
-                    max = C;
-                }; 
+                int max = (A >= B) ? A : B;
+                max = (max >= C) ? max : C;
                 Console.WriteLine("Max = " + max);
             }
             else { Console.WriteLine("Неверное значение! Введите целое число."); };
