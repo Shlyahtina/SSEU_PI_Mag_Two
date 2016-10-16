@@ -14,19 +14,18 @@ namespace LabaTwo
             int max;
             if (int.TryParse(Console.ReadLine(), out A) && int.TryParse(Console.ReadLine(), out B) && int.TryParse(Console.ReadLine(), out C))
             {
-                if ((A >= B)&&(A >= C))
-                {                   
-                        max = A;                                                          
-                } 
-                else  if ((B >= A)&&(B>=C))
+                if (A >= B)
                 {
-                        max = B;
+                    max = A;
                 }
                 else
                 {
-                        max = C;
+                    max = B;
                 };
-                    
+                if (C >= max) 
+                {
+                    max = C;
+                }; 
                 Console.WriteLine("Max = " + max);
             }
             else { Console.WriteLine("Неверное значение! Введите целое число."); };
