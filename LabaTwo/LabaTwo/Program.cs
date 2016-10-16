@@ -15,15 +15,7 @@ namespace LabaTwo
             {
                 if (int.TryParse(Console.ReadLine(), out B))
                 {
-                    int max;
-                    if (A >= B)
-                    {
-                        max = A;
-                    }
-                    else
-                    {
-                        max = B;
-                    };
+                    int max = (A >= B) ? A : B;
 
                     Console.WriteLine("Max = " + max);
                 }
