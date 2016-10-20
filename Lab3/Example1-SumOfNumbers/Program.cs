@@ -14,7 +14,8 @@ namespace Example1_SumOfNumbers
             if (int.TryParse(Console.ReadLine(), out countNumber))
             {
                 int sum = 0;
-                for (int i = 0; i < countNumber; i++)
+                int i = 0;
+                while(i < countNumber)
                 {
                     Console.WriteLine("Enter the numbers " + (i + 1));
                     if (int.TryParse(Console.ReadLine(), out number))
@@ -22,18 +23,21 @@ namespace Example1_SumOfNumbers
                         sum += number;
                         /* DEBUG INFO
                         Console.WriteLine("sum"+sum);
-                        // */ 
+                        // */
+                        i++;
                     }
                     else
                     {
-                        Console.WriteLine("Incorrect value! enter the number.");
-                        i--;
-                    } 
+                        Console.WriteLine("Incorrect value! enter the number.");                       
+                    }                   
                 };
                 Console.WriteLine("Summa numbers" + sum);
                 Console.ReadKey();
-            };
-            
+            }
+            else
+            {
+                Console.WriteLine("Incorrect value! enter the number.");
+            };             
         }
     }
 }
