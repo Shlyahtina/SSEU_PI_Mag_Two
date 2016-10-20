@@ -15,7 +15,7 @@ namespace Example1_SumOfNumbers
             {
                 int sum = 0;
                 int i = 0;
-                while(i < countNumber)
+                do
                 {
                     Console.WriteLine("Enter the numbers " + (i + 1));
                     if (int.TryParse(Console.ReadLine(), out number))
@@ -29,8 +29,8 @@ namespace Example1_SumOfNumbers
                     else
                     {
                         Console.WriteLine("Incorrect value! enter the number.");                       
-                    }                   
-                };
+                    }
+                } while (i < countNumber);
                 Console.WriteLine("Summa numbers" + sum);
                 Console.ReadKey();
             }
