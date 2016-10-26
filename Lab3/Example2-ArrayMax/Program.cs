@@ -30,13 +30,17 @@ namespace Example2_ArrayMax
                 }; ;
             };
             int max = array[0];
-            int iMax = 0;
+            string iMax = "0";
             for (int k = 1; k < array.Length; k++) 
             {
-                if (array[k] > max) 
-                { 
+                if (array[k] == max)
+                {
+                    iMax = iMax + "," + k;
+                }
+                else if(array[k]>max)
+                {
                     max = array[k];
-                    iMax = k;
+                    iMax = k.ToString();
                 };
             };
             Console.WriteLine("Максимально число array["+iMax+"]= " +max); 
