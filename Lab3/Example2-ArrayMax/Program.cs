@@ -17,13 +17,11 @@ namespace Example2_ArrayMax
             } while (!int.TryParse(Console.ReadLine(), out lengthArray) || (lengthArray <= 0));
             int[] array = new int[lengthArray];
             int i = 0;
-            int max = int.MinValue;
             while (i < lengthArray) 
             {
                 Console.Write("Введите array[" + i + "]: ");
                 if (int.TryParse(Console.ReadLine(), out array[i]))
                 {
-                    if (array[i] > max) { max = array[i]; };
                     i++; 
                 }
                 else 
@@ -31,8 +29,17 @@ namespace Example2_ArrayMax
                     Console.WriteLine("Введите целое число");
                 }; ;
             };
-            
-            Console.WriteLine("Максимально число "+max); 
+            int max = array[0];
+            int iMax = 0;
+            for (int k = 1; k < array.Length; k++) 
+            {
+                if (array[k] > max) 
+                { 
+                    max = array[k];
+                    iMax = k;
+                };
+            };
+            Console.WriteLine("Максимально число array["+iMax+"]= " +max); 
             Console.ReadKey();
         }
     }
