@@ -9,12 +9,16 @@ namespace Faktorial
         static void Main(string[] args)
         {
             int number;
-            int factorial;
+            int factorial=1;
             Console.WriteLine("Введите число:");
             if (int.TryParse(Console.ReadLine(), out number))
             {
-              factorial = number * (number - 1);
-              Console.WriteLine("Факториал:" + factorial);
+                for (int i = 2; i <= number; i++)
+                {
+                    factorial *= i;
+                   
+                }
+                Console.WriteLine("Факториал:" + factorial);
             }else {Console.WriteLine("Неверное значение! Введите число."); }
             Console.ReadKey();
         }
