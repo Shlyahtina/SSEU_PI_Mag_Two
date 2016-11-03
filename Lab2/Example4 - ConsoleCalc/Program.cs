@@ -15,25 +15,46 @@ namespace Example4___ConsoleCalc
             double result = 0;
             string operation;
 
-            Console.ReadKey();
-
-            if (double.TryParse(Console.ReadLine(), out operand1) && double.TryParse(Console.ReadLine(), out operand2))
+            Console.WriteLine("Введите первое число");
+                       
+            if (double.TryParse(Console.ReadLine(), out operand1))
             {
+                Console.WriteLine("Введите операцию: '+'  '-'  '*'  '/'  'sqrt'");
+                operation = Console.ReadLine();
+                switch (operation) 
+                {
+                    case "+": 
+                    case "-": 
+                    case "*": 
+                    case "/":
 
+                    Console.WriteLine("Введите второе число");
+                    if(double.TryParse(Console.ReadLine(), out operand2))
+                    {
+                         switch (operation) 
+                         {
+                            case "+": result = operand1 + operand2; break;
+                            case "-": result = operand1 - operand2; break;
+                            case "*": result = operand1 * operand2; break;
+                            case "/": result = operand1 / operand2; break;
+                        };
+                    }
+                    else
+                    {
+                        Console.WriteLine("Операнд должен быть числом!");
+                    };
+                    break;
+
+                    case "sqrt": result = Math.Sqrt(operand1); break;
+                    default: Console.WriteLine("Неверная операция"); break;
+                };
+                Console.WriteLine(operand1 + " " + operation+ " " + operand2 + " = " +result);
             }
-            else { Console.WriteLine("Операнд должен быть числом!"); };
-
-            //выбираем операцию
-            operation = Console.ReadLine();
-            switch (operation) 
+            else 
             {
-                case "+": result = operand1 + operand2; break;
-                case "-": result = operand1 - operand2; break;
-                case "*": result = operand1 * operand2; break;
-                case "/": result = operand1 / operand2; break;
-                case "sqrt": break;
-                default: Console.WriteLine("Неверная операция"); break;
+                Console.WriteLine("Операнд должен быть числом!");
             };
+            Console.ReadKey();
         }
     }
 }
