@@ -33,16 +33,27 @@ namespace Task3_Min
             {
                 if (array[k] == min)
                 {
-                    iMin = iMin + "," + k;
+                    iMin = iMin + "," + k;                    
                 }
                 else if (array[k] < min)
                 {
                     min = array[k];
                     iMin = k.ToString();
+                    
                 };
+                
             };
             Console.WriteLine("Минимальное число[" + iMin + "]= " + min);
-            Console.ReadKey();
+
+            Console.WriteLine("\n Минимум заменяем на ноль");
+            for (int k = 0; k < array.Length; k++)
+            {
+                if (array[k] == min)
+                    array[k] = 0;
+                
+                Console.WriteLine("[" + k + "]= " + array[k]);
+            };
+        Console.ReadKey();
         }
     }
 }
