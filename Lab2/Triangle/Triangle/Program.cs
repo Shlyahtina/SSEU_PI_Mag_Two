@@ -23,7 +23,7 @@ namespace Triangle
                     if ((a == b) || (a == c) || (b == c)) 
                     {                        
                         Console.WriteLine("Равнобедренный треугольник.");                        
-                        if ((a = b) == c)
+                        if ((a == b) && (b == c))
                         {
                             Console.WriteLine("Равноcторонницй треугольник.");
                         };
