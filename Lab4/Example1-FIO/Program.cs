@@ -8,11 +8,11 @@ namespace Example1_FIO
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите имя ");
+            Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї ");
             string name = Console.ReadLine();
-            Console.Write("Вв отчество ");
+            Console.Write("Г‚Гў Г®ГІГ·ГҐГ±ГІГўГ® ");
             string otchestvo =Console.ReadLine();
-            Console.Write("Вв фамилию ");
+            Console.Write("Г‚Гў ГґГ Г¬ГЁГ«ГЁГѕ ");
             string lasName = Console.ReadLine();
             //1
             if (!string.IsNullOrEmpty(otchestvo)) { Console.WriteLine(name[0] + "." + otchestvo[0] + "." + lasName); }
@@ -48,7 +48,7 @@ namespace Example1_FIO
             //4
             if (!string.IsNullOrEmpty(otchestvo))
             {
-                Console.WriteLine(name[0].ToString().ToUpper() + "."
+                Console.WriteLine(name[0].ToString().ToUpper() 
                                 + name.Substring(1).ToLower() + " "
                                 + otchestvo[0].ToString().ToUpper()
                                 + otchestvo.Substring(1).ToLower() + " "
@@ -56,7 +56,7 @@ namespace Example1_FIO
             }
             else
             {
-                Console.WriteLine(name[0].ToString().ToUpper() + "."
+                Console.WriteLine(name[0].ToString().ToUpper() 
                               + name.Substring(1).ToLower() + " "
                               + lasName.ToUpper());
             };
