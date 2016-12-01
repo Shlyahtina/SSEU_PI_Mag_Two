@@ -40,7 +40,25 @@ namespace Example2_Student
             this.radioButtonCommerce = new System.Windows.Forms.RadioButton();
             this.labelBudget = new System.Windows.Forms.Label();
             this.textBoxStudentInfo = new System.Windows.Forms.TextBox();
+            this.comboBoxSemestr = new System.Windows.Forms.ComboBox();
+            this.numericUpDownEkz1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz5 = new System.Windows.Forms.NumericUpDown();
+            this.groupBoxOzenki = new System.Windows.Forms.GroupBox();
+            this.labelEkz5 = new System.Windows.Forms.Label();
+            this.labelEkz4 = new System.Windows.Forms.Label();
+            this.labelEkz3 = new System.Windows.Forms.Label();
+            this.labelEkz2 = new System.Windows.Forms.Label();
+            this.labelEkz1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz5)).BeginInit();
+            this.groupBoxOzenki.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelFIO
@@ -48,7 +66,7 @@ namespace Example2_Student
             this.labelFIO.AutoSize = true;
             this.labelFIO.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.labelFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFIO.Location = new System.Drawing.Point(12, 26);
+            this.labelFIO.Location = new System.Drawing.Point(12, 23);
             this.labelFIO.Name = "labelFIO";
             this.labelFIO.Size = new System.Drawing.Size(49, 20);
             this.labelFIO.TabIndex = 1;
@@ -155,7 +173,7 @@ namespace Example2_Student
             // 
             this.radioButtonCommerce.AutoSize = true;
             this.radioButtonCommerce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonCommerce.Location = new System.Drawing.Point(153, 171);
+            this.radioButtonCommerce.Location = new System.Drawing.Point(369, 141);
             this.radioButtonCommerce.Name = "radioButtonCommerce";
             this.radioButtonCommerce.Size = new System.Drawing.Size(212, 24);
             this.radioButtonCommerce.TabIndex = 12;
@@ -174,18 +192,156 @@ namespace Example2_Student
             // 
             // textBoxStudentInfo
             // 
-            this.textBoxStudentInfo.Location = new System.Drawing.Point(16, 215);
+            this.textBoxStudentInfo.Location = new System.Drawing.Point(16, 242);
             this.textBoxStudentInfo.Multiline = true;
             this.textBoxStudentInfo.Name = "textBoxStudentInfo";
             this.textBoxStudentInfo.ReadOnly = true;
-            this.textBoxStudentInfo.Size = new System.Drawing.Size(671, 250);
+            this.textBoxStudentInfo.Size = new System.Drawing.Size(671, 257);
             this.textBoxStudentInfo.TabIndex = 14;
+            // 
+            // comboBoxSemestr
+            // 
+            this.comboBoxSemestr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSemestr.FormattingEnabled = true;
+            this.comboBoxSemestr.Items.AddRange(new object[] {
+            "1 семестр",
+            "2 семестр"});
+            this.comboBoxSemestr.Location = new System.Drawing.Point(457, 35);
+            this.comboBoxSemestr.Name = "comboBoxSemestr";
+            this.comboBoxSemestr.Size = new System.Drawing.Size(198, 24);
+            this.comboBoxSemestr.TabIndex = 15;
+            // 
+            // numericUpDownEkz1
+            // 
+            this.numericUpDownEkz1.Location = new System.Drawing.Point(6, 37);
+            this.numericUpDownEkz1.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz1.Name = "numericUpDownEkz1";
+            this.numericUpDownEkz1.Size = new System.Drawing.Size(65, 22);
+            this.numericUpDownEkz1.TabIndex = 16;
+            // 
+            // numericUpDownEkz2
+            // 
+            this.numericUpDownEkz2.Location = new System.Drawing.Point(86, 37);
+            this.numericUpDownEkz2.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz2.Name = "numericUpDownEkz2";
+            this.numericUpDownEkz2.Size = new System.Drawing.Size(65, 22);
+            this.numericUpDownEkz2.TabIndex = 17;
+            // 
+            // numericUpDownEkz3
+            // 
+            this.numericUpDownEkz3.Location = new System.Drawing.Point(171, 37);
+            this.numericUpDownEkz3.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz3.Name = "numericUpDownEkz3";
+            this.numericUpDownEkz3.Size = new System.Drawing.Size(65, 22);
+            this.numericUpDownEkz3.TabIndex = 18;
+            // 
+            // numericUpDownEkz4
+            // 
+            this.numericUpDownEkz4.Location = new System.Drawing.Point(255, 37);
+            this.numericUpDownEkz4.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz4.Name = "numericUpDownEkz4";
+            this.numericUpDownEkz4.Size = new System.Drawing.Size(65, 22);
+            this.numericUpDownEkz4.TabIndex = 19;
+            // 
+            // numericUpDownEkz5
+            // 
+            this.numericUpDownEkz5.Location = new System.Drawing.Point(338, 37);
+            this.numericUpDownEkz5.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz5.Name = "numericUpDownEkz5";
+            this.numericUpDownEkz5.Size = new System.Drawing.Size(65, 22);
+            this.numericUpDownEkz5.TabIndex = 20;
+            // 
+            // groupBoxOzenki
+            // 
+            this.groupBoxOzenki.Controls.Add(this.labelEkz5);
+            this.groupBoxOzenki.Controls.Add(this.comboBoxSemestr);
+            this.groupBoxOzenki.Controls.Add(this.labelEkz4);
+            this.groupBoxOzenki.Controls.Add(this.labelEkz3);
+            this.groupBoxOzenki.Controls.Add(this.labelEkz2);
+            this.groupBoxOzenki.Controls.Add(this.labelEkz1);
+            this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz1);
+            this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz5);
+            this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz2);
+            this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz4);
+            this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz3);
+            this.groupBoxOzenki.Location = new System.Drawing.Point(16, 168);
+            this.groupBoxOzenki.Name = "groupBoxOzenki";
+            this.groupBoxOzenki.Size = new System.Drawing.Size(671, 68);
+            this.groupBoxOzenki.TabIndex = 21;
+            this.groupBoxOzenki.TabStop = false;
+            this.groupBoxOzenki.Text = "Оценки за экземен";
+            // 
+            // labelEkz5
+            // 
+            this.labelEkz5.AutoSize = true;
+            this.labelEkz5.Location = new System.Drawing.Point(337, 18);
+            this.labelEkz5.Name = "labelEkz5";
+            this.labelEkz5.Size = new System.Drawing.Size(76, 17);
+            this.labelEkz5.TabIndex = 25;
+            this.labelEkz5.Text = "Экзамен 5";
+            // 
+            // labelEkz4
+            // 
+            this.labelEkz4.AutoSize = true;
+            this.labelEkz4.Location = new System.Drawing.Point(252, 18);
+            this.labelEkz4.Name = "labelEkz4";
+            this.labelEkz4.Size = new System.Drawing.Size(76, 17);
+            this.labelEkz4.TabIndex = 24;
+            this.labelEkz4.Text = "Экзамен 4";
+            // 
+            // labelEkz3
+            // 
+            this.labelEkz3.AutoSize = true;
+            this.labelEkz3.Location = new System.Drawing.Point(168, 18);
+            this.labelEkz3.Name = "labelEkz3";
+            this.labelEkz3.Size = new System.Drawing.Size(76, 17);
+            this.labelEkz3.TabIndex = 23;
+            this.labelEkz3.Text = "Экзамен 3";
+            // 
+            // labelEkz2
+            // 
+            this.labelEkz2.AutoSize = true;
+            this.labelEkz2.Location = new System.Drawing.Point(83, 18);
+            this.labelEkz2.Name = "labelEkz2";
+            this.labelEkz2.Size = new System.Drawing.Size(76, 17);
+            this.labelEkz2.TabIndex = 22;
+            this.labelEkz2.Text = "Экзамен 2";
+            // 
+            // labelEkz1
+            // 
+            this.labelEkz1.AutoSize = true;
+            this.labelEkz1.Location = new System.Drawing.Point(6, 18);
+            this.labelEkz1.Name = "labelEkz1";
+            this.labelEkz1.Size = new System.Drawing.Size(76, 17);
+            this.labelEkz1.TabIndex = 21;
+            this.labelEkz1.Text = "Экзамен 1";
             // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 477);
+            this.ClientSize = new System.Drawing.Size(711, 509);
+            this.Controls.Add(this.groupBoxOzenki);
             this.Controls.Add(this.textBoxStudentInfo);
             this.Controls.Add(this.labelBudget);
             this.Controls.Add(this.radioButtonCommerce);
@@ -201,6 +357,13 @@ namespace Example2_Student
             this.Name = "FormStudent";
             this.Text = "Студент";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz5)).EndInit();
+            this.groupBoxOzenki.ResumeLayout(false);
+            this.groupBoxOzenki.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +383,18 @@ namespace Example2_Student
         private System.Windows.Forms.RadioButton radioButtonCommerce;
         private System.Windows.Forms.Label labelBudget;
         private System.Windows.Forms.TextBox textBoxStudentInfo;
+        private System.Windows.Forms.ComboBox comboBoxSemestr;
+        private System.Windows.Forms.NumericUpDown numericUpDownEkz1;
+        private System.Windows.Forms.NumericUpDown numericUpDownEkz2;
+        private System.Windows.Forms.NumericUpDown numericUpDownEkz3;
+        private System.Windows.Forms.NumericUpDown numericUpDownEkz4;
+        private System.Windows.Forms.NumericUpDown numericUpDownEkz5;
+        private System.Windows.Forms.GroupBox groupBoxOzenki;
+        private System.Windows.Forms.Label labelEkz5;
+        private System.Windows.Forms.Label labelEkz4;
+        private System.Windows.Forms.Label labelEkz3;
+        private System.Windows.Forms.Label labelEkz2;
+        private System.Windows.Forms.Label labelEkz1;
     }
 }
 
