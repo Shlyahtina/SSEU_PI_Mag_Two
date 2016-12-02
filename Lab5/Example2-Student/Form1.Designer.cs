@@ -57,6 +57,7 @@ namespace Example2_Student
             this.checkBoxEkz3neyavka = new System.Windows.Forms.CheckBox();
             this.checkBoxEkz4neyavka = new System.Windows.Forms.CheckBox();
             this.checkBoxEkz5neyavka = new System.Windows.Forms.CheckBox();
+            this.buttonNaSledKurs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).BeginInit();
@@ -451,11 +452,22 @@ namespace Example2_Student
             this.checkBoxEkz5neyavka.UseVisualStyleBackColor = true;
             this.checkBoxEkz5neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz5neyavka_CheckedChanged);
             // 
+            // buttonNaSledKurs
+            // 
+            this.buttonNaSledKurs.Location = new System.Drawing.Point(12, 495);
+            this.buttonNaSledKurs.Name = "buttonNaSledKurs";
+            this.buttonNaSledKurs.Size = new System.Drawing.Size(75, 23);
+            this.buttonNaSledKurs.TabIndex = 22;
+            this.buttonNaSledKurs.Text = "Перевести на следующий курс";
+            this.buttonNaSledKurs.UseVisualStyleBackColor = true;
+            this.buttonNaSledKurs.Click += new System.EventHandler(this.buttonNaSledKurs_Click);
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 501);
+            this.ClientSize = new System.Drawing.Size(642, 528);
+            this.Controls.Add(this.buttonNaSledKurs);
             this.Controls.Add(this.groupBoxOzenki);
             this.Controls.Add(this.textBoxStudentInfo);
             this.Controls.Add(this.labelBudget);
@@ -516,6 +528,7 @@ namespace Example2_Student
         private System.Windows.Forms.CheckBox checkBoxEkz3;
         private System.Windows.Forms.CheckBox checkBoxEkz2;
         private System.Windows.Forms.CheckBox checkBoxEkz1;
+        private System.Windows.Forms.Button buttonNaSledKurs;
     }
 }
 

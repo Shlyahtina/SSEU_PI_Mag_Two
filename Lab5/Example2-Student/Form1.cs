@@ -429,6 +429,15 @@ namespace Example2_Student
             };
         }
 
+        private void buttonNaSledKurs_Click(object sender, EventArgs e)
+        {
+            //выполнить перевод
+            student.perevestiNaSledKurs();
+            //вывести на форму
+            numericUpDownKurs.Value = student.kurs;
+            textBoxStudentInfo.Text = student.ToString();
+        }
+
        
     }
 }
