@@ -47,11 +47,16 @@ namespace Example2_Student
             this.numericUpDownEkz4 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownEkz5 = new System.Windows.Forms.NumericUpDown();
             this.groupBoxOzenki = new System.Windows.Forms.GroupBox();
-            this.labelEkz5 = new System.Windows.Forms.Label();
-            this.labelEkz4 = new System.Windows.Forms.Label();
-            this.labelEkz3 = new System.Windows.Forms.Label();
-            this.labelEkz2 = new System.Windows.Forms.Label();
-            this.labelEkz1 = new System.Windows.Forms.Label();
+            this.checkBoxEkz1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz5 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz1neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz2neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz3neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz4neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz5neyavka = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).BeginInit();
@@ -167,11 +172,11 @@ namespace Example2_Student
             // 
             this.radioButtonBudget.AutoSize = true;
             this.radioButtonBudget.Checked = true;
-            this.radioButtonBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonBudget.Location = new System.Drawing.Point(115, 115);
+            this.radioButtonBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonBudget.Location = new System.Drawing.Point(115, 101);
             this.radioButtonBudget.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonBudget.Name = "radioButtonBudget";
-            this.radioButtonBudget.Size = new System.Drawing.Size(150, 21);
+            this.radioButtonBudget.Size = new System.Drawing.Size(160, 22);
             this.radioButtonBudget.TabIndex = 11;
             this.radioButtonBudget.TabStop = true;
             this.radioButtonBudget.Text = "бюджетной основе";
@@ -181,11 +186,11 @@ namespace Example2_Student
             // radioButtonCommerce
             // 
             this.radioButtonCommerce.AutoSize = true;
-            this.radioButtonCommerce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonCommerce.Location = new System.Drawing.Point(277, 115);
+            this.radioButtonCommerce.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonCommerce.Location = new System.Drawing.Point(277, 101);
             this.radioButtonCommerce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonCommerce.Name = "radioButtonCommerce";
-            this.radioButtonCommerce.Size = new System.Drawing.Size(171, 21);
+            this.radioButtonCommerce.Size = new System.Drawing.Size(184, 22);
             this.radioButtonCommerce.TabIndex = 12;
             this.radioButtonCommerce.Text = "коммерческой основе";
             this.radioButtonCommerce.UseVisualStyleBackColor = true;
@@ -194,7 +199,7 @@ namespace Example2_Student
             // 
             this.labelBudget.AutoSize = true;
             this.labelBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBudget.Location = new System.Drawing.Point(14, 115);
+            this.labelBudget.Location = new System.Drawing.Point(14, 101);
             this.labelBudget.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBudget.Name = "labelBudget";
             this.labelBudget.Size = new System.Drawing.Size(100, 17);
@@ -203,13 +208,14 @@ namespace Example2_Student
             // 
             // textBoxStudentInfo
             // 
-            this.textBoxStudentInfo.Location = new System.Drawing.Point(12, 197);
+            this.textBoxStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxStudentInfo.Location = new System.Drawing.Point(12, 243);
             this.textBoxStudentInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxStudentInfo.Multiline = true;
             this.textBoxStudentInfo.Name = "textBoxStudentInfo";
             this.textBoxStudentInfo.ReadOnly = true;
             this.textBoxStudentInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxStudentInfo.Size = new System.Drawing.Size(504, 210);
+            this.textBoxStudentInfo.Size = new System.Drawing.Size(619, 238);
             this.textBoxStudentInfo.TabIndex = 14;
             // 
             // comboBoxSemestr
@@ -219,16 +225,16 @@ namespace Example2_Student
             this.comboBoxSemestr.Items.AddRange(new object[] {
             "1 семестр",
             "2 семестр"});
-            this.comboBoxSemestr.Location = new System.Drawing.Point(343, 28);
+            this.comboBoxSemestr.Location = new System.Drawing.Point(465, 42);
             this.comboBoxSemestr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxSemestr.Name = "comboBoxSemestr";
-            this.comboBoxSemestr.Size = new System.Drawing.Size(150, 21);
+            this.comboBoxSemestr.Size = new System.Drawing.Size(150, 24);
             this.comboBoxSemestr.TabIndex = 15;
             this.comboBoxSemestr.SelectedIndexChanged += new System.EventHandler(this.comboBoxSemestr_SelectedIndexChanged);
             // 
             // numericUpDownEkz1
             // 
-            this.numericUpDownEkz1.Location = new System.Drawing.Point(4, 30);
+            this.numericUpDownEkz1.Location = new System.Drawing.Point(10, 47);
             this.numericUpDownEkz1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownEkz1.Maximum = new decimal(new int[] {
             5,
@@ -236,13 +242,13 @@ namespace Example2_Student
             0,
             0});
             this.numericUpDownEkz1.Name = "numericUpDownEkz1";
-            this.numericUpDownEkz1.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownEkz1.Size = new System.Drawing.Size(49, 22);
             this.numericUpDownEkz1.TabIndex = 16;
             this.numericUpDownEkz1.ValueChanged += new System.EventHandler(this.numericUpDownEkz1_ValueChanged);
             // 
             // numericUpDownEkz2
             // 
-            this.numericUpDownEkz2.Location = new System.Drawing.Point(64, 30);
+            this.numericUpDownEkz2.Location = new System.Drawing.Point(103, 47);
             this.numericUpDownEkz2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownEkz2.Maximum = new decimal(new int[] {
             5,
@@ -250,13 +256,13 @@ namespace Example2_Student
             0,
             0});
             this.numericUpDownEkz2.Name = "numericUpDownEkz2";
-            this.numericUpDownEkz2.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownEkz2.Size = new System.Drawing.Size(49, 22);
             this.numericUpDownEkz2.TabIndex = 17;
             this.numericUpDownEkz2.ValueChanged += new System.EventHandler(this.numericUpDownEkz2_ValueChanged);
             // 
             // numericUpDownEkz3
             // 
-            this.numericUpDownEkz3.Location = new System.Drawing.Point(128, 30);
+            this.numericUpDownEkz3.Location = new System.Drawing.Point(200, 47);
             this.numericUpDownEkz3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownEkz3.Maximum = new decimal(new int[] {
             5,
@@ -264,13 +270,13 @@ namespace Example2_Student
             0,
             0});
             this.numericUpDownEkz3.Name = "numericUpDownEkz3";
-            this.numericUpDownEkz3.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownEkz3.Size = new System.Drawing.Size(49, 22);
             this.numericUpDownEkz3.TabIndex = 18;
             this.numericUpDownEkz3.ValueChanged += new System.EventHandler(this.numericUpDownEkz3_ValueChanged);
             // 
             // numericUpDownEkz4
             // 
-            this.numericUpDownEkz4.Location = new System.Drawing.Point(191, 30);
+            this.numericUpDownEkz4.Location = new System.Drawing.Point(296, 47);
             this.numericUpDownEkz4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownEkz4.Maximum = new decimal(new int[] {
             5,
@@ -278,13 +284,13 @@ namespace Example2_Student
             0,
             0});
             this.numericUpDownEkz4.Name = "numericUpDownEkz4";
-            this.numericUpDownEkz4.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownEkz4.Size = new System.Drawing.Size(49, 22);
             this.numericUpDownEkz4.TabIndex = 19;
             this.numericUpDownEkz4.ValueChanged += new System.EventHandler(this.numericUpDownEkz4_ValueChanged);
             // 
             // numericUpDownEkz5
             // 
-            this.numericUpDownEkz5.Location = new System.Drawing.Point(254, 30);
+            this.numericUpDownEkz5.Location = new System.Drawing.Point(397, 44);
             this.numericUpDownEkz5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownEkz5.Maximum = new decimal(new int[] {
             5,
@@ -292,87 +298,164 @@ namespace Example2_Student
             0,
             0});
             this.numericUpDownEkz5.Name = "numericUpDownEkz5";
-            this.numericUpDownEkz5.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownEkz5.Size = new System.Drawing.Size(49, 22);
             this.numericUpDownEkz5.TabIndex = 20;
             this.numericUpDownEkz5.ValueChanged += new System.EventHandler(this.numericUpDownEkz5_ValueChanged);
             // 
             // groupBoxOzenki
             // 
-            this.groupBoxOzenki.Controls.Add(this.labelEkz5);
+            this.groupBoxOzenki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz5neyavka);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz4neyavka);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz3neyavka);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz2neyavka);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz1neyavka);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz5);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz4);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz3);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz2);
+            this.groupBoxOzenki.Controls.Add(this.checkBoxEkz1);
             this.groupBoxOzenki.Controls.Add(this.comboBoxSemestr);
-            this.groupBoxOzenki.Controls.Add(this.labelEkz4);
-            this.groupBoxOzenki.Controls.Add(this.labelEkz3);
-            this.groupBoxOzenki.Controls.Add(this.labelEkz2);
-            this.groupBoxOzenki.Controls.Add(this.labelEkz1);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz1);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz5);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz2);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz4);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz3);
+            this.groupBoxOzenki.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxOzenki.Location = new System.Drawing.Point(12, 136);
             this.groupBoxOzenki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxOzenki.Name = "groupBoxOzenki";
             this.groupBoxOzenki.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxOzenki.Size = new System.Drawing.Size(503, 55);
+            this.groupBoxOzenki.Size = new System.Drawing.Size(619, 103);
             this.groupBoxOzenki.TabIndex = 21;
             this.groupBoxOzenki.TabStop = false;
             this.groupBoxOzenki.Text = "Оценки за экземен";
             // 
-            // labelEkz5
+            // checkBoxEkz1
             // 
-            this.labelEkz5.AutoSize = true;
-            this.labelEkz5.Location = new System.Drawing.Point(253, 15);
-            this.labelEkz5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEkz5.Name = "labelEkz5";
-            this.labelEkz5.Size = new System.Drawing.Size(61, 13);
-            this.labelEkz5.TabIndex = 25;
-            this.labelEkz5.Text = "Экзамен 5";
+            this.checkBoxEkz1.AutoSize = true;
+            this.checkBoxEkz1.Checked = true;
+            this.checkBoxEkz1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz1.Location = new System.Drawing.Point(10, 20);
+            this.checkBoxEkz1.Name = "checkBoxEkz1";
+            this.checkBoxEkz1.Size = new System.Drawing.Size(92, 20);
+            this.checkBoxEkz1.TabIndex = 21;
+            this.checkBoxEkz1.Text = "Экзамен1";
+            this.checkBoxEkz1.UseVisualStyleBackColor = true;
+            this.checkBoxEkz1.CheckedChanged += new System.EventHandler(this.checkBoxEkz1_CheckedChanged);
             // 
-            // labelEkz4
+            // checkBoxEkz2
             // 
-            this.labelEkz4.AutoSize = true;
-            this.labelEkz4.Location = new System.Drawing.Point(189, 15);
-            this.labelEkz4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEkz4.Name = "labelEkz4";
-            this.labelEkz4.Size = new System.Drawing.Size(61, 13);
-            this.labelEkz4.TabIndex = 24;
-            this.labelEkz4.Text = "Экзамен 4";
+            this.checkBoxEkz2.AutoSize = true;
+            this.checkBoxEkz2.Checked = true;
+            this.checkBoxEkz2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz2.Location = new System.Drawing.Point(103, 19);
+            this.checkBoxEkz2.Name = "checkBoxEkz2";
+            this.checkBoxEkz2.Size = new System.Drawing.Size(92, 20);
+            this.checkBoxEkz2.TabIndex = 22;
+            this.checkBoxEkz2.Text = "Экзамен2";
+            this.checkBoxEkz2.UseVisualStyleBackColor = true;
+            this.checkBoxEkz2.CheckedChanged += new System.EventHandler(this.checkBoxEkz2_CheckedChanged);
             // 
-            // labelEkz3
+            // checkBoxEkz3
             // 
-            this.labelEkz3.AutoSize = true;
-            this.labelEkz3.Location = new System.Drawing.Point(126, 15);
-            this.labelEkz3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEkz3.Name = "labelEkz3";
-            this.labelEkz3.Size = new System.Drawing.Size(61, 13);
-            this.labelEkz3.TabIndex = 23;
-            this.labelEkz3.Text = "Экзамен 3";
+            this.checkBoxEkz3.AutoSize = true;
+            this.checkBoxEkz3.Checked = true;
+            this.checkBoxEkz3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz3.Location = new System.Drawing.Point(200, 19);
+            this.checkBoxEkz3.Name = "checkBoxEkz3";
+            this.checkBoxEkz3.Size = new System.Drawing.Size(92, 20);
+            this.checkBoxEkz3.TabIndex = 23;
+            this.checkBoxEkz3.Text = "Экзамен3";
+            this.checkBoxEkz3.UseVisualStyleBackColor = true;
+            this.checkBoxEkz3.CheckedChanged += new System.EventHandler(this.checkBoxEkz3_CheckedChanged);
             // 
-            // labelEkz2
+            // checkBoxEkz4
             // 
-            this.labelEkz2.AutoSize = true;
-            this.labelEkz2.Location = new System.Drawing.Point(62, 15);
-            this.labelEkz2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEkz2.Name = "labelEkz2";
-            this.labelEkz2.Size = new System.Drawing.Size(61, 13);
-            this.labelEkz2.TabIndex = 22;
-            this.labelEkz2.Text = "Экзамен 2";
+            this.checkBoxEkz4.AutoSize = true;
+            this.checkBoxEkz4.Checked = true;
+            this.checkBoxEkz4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz4.Location = new System.Drawing.Point(296, 19);
+            this.checkBoxEkz4.Name = "checkBoxEkz4";
+            this.checkBoxEkz4.Size = new System.Drawing.Size(95, 20);
+            this.checkBoxEkz4.TabIndex = 24;
+            this.checkBoxEkz4.Text = "Экзамен 4";
+            this.checkBoxEkz4.UseVisualStyleBackColor = true;
+            this.checkBoxEkz4.CheckedChanged += new System.EventHandler(this.checkBoxEkz4_CheckedChanged);
             // 
-            // labelEkz1
+            // checkBoxEkz5
             // 
-            this.labelEkz1.AutoSize = true;
-            this.labelEkz1.Location = new System.Drawing.Point(4, 15);
-            this.labelEkz1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEkz1.Name = "labelEkz1";
-            this.labelEkz1.Size = new System.Drawing.Size(61, 13);
-            this.labelEkz1.TabIndex = 21;
-            this.labelEkz1.Text = "Экзамен 1";
+            this.checkBoxEkz5.AutoSize = true;
+            this.checkBoxEkz5.Checked = true;
+            this.checkBoxEkz5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz5.Location = new System.Drawing.Point(397, 19);
+            this.checkBoxEkz5.Name = "checkBoxEkz5";
+            this.checkBoxEkz5.Size = new System.Drawing.Size(92, 20);
+            this.checkBoxEkz5.TabIndex = 25;
+            this.checkBoxEkz5.Text = "Экзамен5";
+            this.checkBoxEkz5.UseVisualStyleBackColor = true;
+            this.checkBoxEkz5.CheckedChanged += new System.EventHandler(this.checkBoxEkz5_CheckedChanged);
+            // 
+            // checkBoxEkz1neyavka
+            // 
+            this.checkBoxEkz1neyavka.AutoSize = true;
+            this.checkBoxEkz1neyavka.Location = new System.Drawing.Point(10, 76);
+            this.checkBoxEkz1neyavka.Name = "checkBoxEkz1neyavka";
+            this.checkBoxEkz1neyavka.Size = new System.Drawing.Size(73, 20);
+            this.checkBoxEkz1neyavka.TabIndex = 26;
+            this.checkBoxEkz1neyavka.Text = "неявка";
+            this.checkBoxEkz1neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz1neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz1neyavka_CheckedChanged);
+            // 
+            // checkBoxEkz2neyavka
+            // 
+            this.checkBoxEkz2neyavka.AutoSize = true;
+            this.checkBoxEkz2neyavka.Location = new System.Drawing.Point(95, 76);
+            this.checkBoxEkz2neyavka.Name = "checkBoxEkz2neyavka";
+            this.checkBoxEkz2neyavka.Size = new System.Drawing.Size(73, 20);
+            this.checkBoxEkz2neyavka.TabIndex = 27;
+            this.checkBoxEkz2neyavka.Text = "неявка";
+            this.checkBoxEkz2neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz2neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz2neyavka_CheckedChanged);
+            // 
+            // checkBoxEkz3neyavka
+            // 
+            this.checkBoxEkz3neyavka.AutoSize = true;
+            this.checkBoxEkz3neyavka.Location = new System.Drawing.Point(200, 76);
+            this.checkBoxEkz3neyavka.Name = "checkBoxEkz3neyavka";
+            this.checkBoxEkz3neyavka.Size = new System.Drawing.Size(73, 20);
+            this.checkBoxEkz3neyavka.TabIndex = 28;
+            this.checkBoxEkz3neyavka.Text = "неявка";
+            this.checkBoxEkz3neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz3neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz3neyavka_CheckedChanged);
+            // 
+            // checkBoxEkz4neyavka
+            // 
+            this.checkBoxEkz4neyavka.AutoSize = true;
+            this.checkBoxEkz4neyavka.Location = new System.Drawing.Point(296, 76);
+            this.checkBoxEkz4neyavka.Name = "checkBoxEkz4neyavka";
+            this.checkBoxEkz4neyavka.Size = new System.Drawing.Size(73, 20);
+            this.checkBoxEkz4neyavka.TabIndex = 29;
+            this.checkBoxEkz4neyavka.Text = "неявка";
+            this.checkBoxEkz4neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz4neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz4neyavka_CheckedChanged);
+            // 
+            // checkBoxEkz5neyavka
+            // 
+            this.checkBoxEkz5neyavka.AutoSize = true;
+            this.checkBoxEkz5neyavka.Location = new System.Drawing.Point(397, 76);
+            this.checkBoxEkz5neyavka.Name = "checkBoxEkz5neyavka";
+            this.checkBoxEkz5neyavka.Size = new System.Drawing.Size(73, 20);
+            this.checkBoxEkz5neyavka.TabIndex = 30;
+            this.checkBoxEkz5neyavka.Text = "неявка";
+            this.checkBoxEkz5neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz5neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz5neyavka_CheckedChanged);
             // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 414);
+            this.ClientSize = new System.Drawing.Size(642, 501);
             this.Controls.Add(this.groupBoxOzenki);
             this.Controls.Add(this.textBoxStudentInfo);
             this.Controls.Add(this.labelBudget);
@@ -423,11 +506,16 @@ namespace Example2_Student
         private System.Windows.Forms.NumericUpDown numericUpDownEkz4;
         private System.Windows.Forms.NumericUpDown numericUpDownEkz5;
         private System.Windows.Forms.GroupBox groupBoxOzenki;
-        private System.Windows.Forms.Label labelEkz5;
-        private System.Windows.Forms.Label labelEkz4;
-        private System.Windows.Forms.Label labelEkz3;
-        private System.Windows.Forms.Label labelEkz2;
-        private System.Windows.Forms.Label labelEkz1;
+        private System.Windows.Forms.CheckBox checkBoxEkz5neyavka;
+        private System.Windows.Forms.CheckBox checkBoxEkz4neyavka;
+        private System.Windows.Forms.CheckBox checkBoxEkz3neyavka;
+        private System.Windows.Forms.CheckBox checkBoxEkz2neyavka;
+        private System.Windows.Forms.CheckBox checkBoxEkz1neyavka;
+        private System.Windows.Forms.CheckBox checkBoxEkz5;
+        private System.Windows.Forms.CheckBox checkBoxEkz4;
+        private System.Windows.Forms.CheckBox checkBoxEkz3;
+        private System.Windows.Forms.CheckBox checkBoxEkz2;
+        private System.Windows.Forms.CheckBox checkBoxEkz1;
     }
 }
 
