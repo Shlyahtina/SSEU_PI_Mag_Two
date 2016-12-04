@@ -1,0 +1,56 @@
+class Dragon{ // класс дракон
+
+	string name = ""; //имя
+    byte age = 0; //возраст
+    boolean female = false; // пол
+    double weight = 1; //вес
+	string сolour= ""; //цвет
+	int energy= 0;
+	
+	// конструктор
+	    public Dragon (string name, int age, boolean female, double weight, string сolour, int energy)
+    {
+        this.name = name;
+        this.age = age;
+        this.female = female;
+        this.weight = weight;
+		this.сolour = black;
+    }
+	// кушать
+	void eat(string food, double foodWeight)
+	{
+		weight += foodWeight;
+		energy += 2;
+	}
+	// сон
+	// время дня, утро, день, вечер, ночь. 
+	void sleep(string timeOfDay)
+	{
+	  if(timeOfDay.Equals(ночь))
+	  {
+		energy += 10;
+	  }else{
+		energy += 1;
+	  }
+	}
+	// извергать огонь
+	public string fire()
+	{
+		weight -= 3;
+		energy -= 5;
+		return Console.WriteLine("Огонь");
+		
+	}
+	 // идти (количество шагов, права или лево)
+	public walk(int countStep, boolean napravlenie)
+	{
+		energy -= 2;
+
+	}
+	// летать( количество шагов, направление, высота) 
+		public string fly(int countStep, string napravlenie, int vysota)
+	{
+		energy -= 3;
+	}
+}
+   
