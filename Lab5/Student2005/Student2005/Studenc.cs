@@ -8,7 +8,7 @@ namespace Student2005
     {
         public string FIO = "";          //‘»ќ
         public string Nstud = "000000";  //є студЅилета
-        public int kurs = 1;             // урс
+        int kurs = 1;             // урс
         public string gruppa = "";       //√руппа
         //public bool budget = true;       //Ѕюджет
         public byte[,] ozenki = new byte[8, 5]; //ќценки
@@ -27,6 +27,18 @@ namespace Student2005
             ozenki = copyFrom.ozenki;
         }
 
+        public int Kurs
+        {
+            get { return kurs; }
+            set
+            {
+                if (value >= 1 && value <= 4)
+                { kurs = value; };
+            }
+        
+        }
+
+        //перевести на следующий курс
         public void perevestiNaSledKurs()
         {
             if (kurs < 4)
@@ -39,7 +51,7 @@ namespace Student2005
             double sum = 0; //сумма баллов
             int n = 0;//количество экзаменов с оценками
             //суммируем и пересчитываем оценки в цикле
-            for (int i = 0; i < 2 * kurs; i++)
+            for (int i = 0; i < KolvoSemestrov; i++)
                 for (int j = 0; j < 5; j++)
                 {
                     if (ozenki[i, j] > 1)
@@ -59,7 +71,7 @@ namespace Student2005
         {
             string strOzenki = "";
 
-            for (int i = 0; i < 2 * kurs; i++) 
+            for (int i = 0; i < KolvoSemestrov; i++) 
             {
                 //выводим номер семестра в начале строки
                 strOzenki += (i + 1) + " семестр: ";
@@ -82,6 +94,26 @@ namespace Student2005
                           strOzenki + "\r\n"+
                           "—редний балл:"+ sredniyBall();
         }
+
+        //количество семестров
+        protected int KolvoSemestrov()
+        { return KolvoSemestrov;}
+
+        // колич€ество несданных экзаменов за указанный семестр
+        protected int KolNesdach(int Semestr)
+        {
+            int k = 0;
+            //перебираем все экзамены за указанный семестр
+            for (int i = 0; i < 5; i++)
+            {
+                //если не€вка или неуд
+                if ((ozenki[semestr, i] == 1) || (ozenki[Semestr, i] == 2))
+                {
+                    k += 1;
+                }
+            }
+            return k;
+        }
     }
 
     class StudentBudg: Student
@@ -95,7 +127,7 @@ namespace Student2005
         public decimal Stipendia(int semestr)
         {
             //если семестр не выходит за допустимые границы
-            if ((semestr >= 0) && (semestr <= 2*kurs))
+            if ((semestr >= 0) && (semestr <= KolvoSemestrov))
             {
                 bool stip = true; //есть стипенди€
                 bool stipPovysh = true; //есть повышенна€ стипенди€
@@ -125,7 +157,7 @@ namespace Student2005
         {
             //формируем запись о стипендии за каждый семестр
             string stipendia = "—типенди€:\r\n";
-            for (int i = 0; i < 2 * kurs; i++)
+            for (int i = 0; i < KolvoSemestrov; i++)
                 stipendia += i+1 + "семестр: " + Stipendia(i) + "руб. \r\n";
             //собираем результат из 
             return base.ToString() + "\r\n" //метода класса-предка (Student)
@@ -161,7 +193,7 @@ namespace Student2005
         public decimal Dolg()
         {
             //долг = стоимость обучени€ за семестр * кол-во семестров - оплачено
-            return stoimostObucheniya * kurs * 2 - oplacheno;
+            return stoimostObucheniya * KolvoSemestrov - oplacheno;
         }
 
         public override string ToString()
