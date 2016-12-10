@@ -54,41 +54,8 @@ namespace Student2005
             else
                 return 0; //средний балл = 0
         }
-       
-        public decimal stipendia(int semestr)
-        {
-            //если семестр не выходит за допустимые границы
-            if ((semestr >= 0) && (semestr <= 2 * kurs))
-            {
-                if (budget) //студент бюджетник
-                {
-                    bool stip = true; //есть стипендия
-                    bool stipPovysh = true; //есть повышенная стипендия
-                    int n = 0;  //количество экзаменов
-                    for (int i = 0; i < 5; i++)
-                    {
-                        if (ozenki[semestr, i] > 0) //если экзамен был
-                        {
-                            n++;    //увеличить количество экзаменов
-                            stip &= (ozenki[semestr, i] > 3); //обычная стипендия - оценка выше 3
-                            stipPovysh &= (ozenki[semestr, i] == 5); //повышенная - оценка 5
-                        };
-                    };
-                    if (n == 0) //не было экзаменов
-                        return 0; //еще нет стипендии
-                    if (stipPovysh) //есть повышенная стипендия
-                        return stipPovyshSum;
-                    else if (stip) //есть обычная стипендия
-                        return stipSum;
-                    else
-                        return 0;
-                };
-                return 0; //не бюджетник - нет стипендии
-            };
-            return 0; //недопустимый семестр - нет стипендии
-        }
 
-        public string ToString()
+        public override string ToString()
         {
             string strOzenki = "";
 
@@ -105,8 +72,7 @@ namespace Student2005
                         strOzenki += ozenki[i, j] + ", "; //добавляем оценку к строке
                 };
                 //конец строки
-                strOzenki += "\r\n" +
-                 "Стипендия: " + stipendia(i) + "руб. \r\n";
+                strOzenki += "\r\n";
             };
 
                 return "ФИО: " + FIO + "\r\n" +
@@ -154,7 +120,18 @@ namespace Student2005
             };
             return 0; //недопустимый семестр - нет стипендии
         }
-    
+
+        public override string ToString() 
+        {
+            //формируем запись о стипендии за каждый семестр
+            string stipendia = "Стипендия:\r\n";
+            for (int i = 0; i < 2 * kurs; i++)
+                stipendia += i+1 + "семестр: " + Stipendia(i) + "руб. \r\n";
+            //собираем результат из 
+            return base.ToString() + "\r\n" //метода класса-предка (Student)
+            + "Обучение на бюджетной основе \r\n" //запись о бюджетном огбучении
+            + stipendia;           
+        }
     }
 
     class StudentPlat:Student 
@@ -185,6 +162,15 @@ namespace Student2005
         {
             //долг = стоимость обучения за семестр * кол-во семестров - оплачено
             return stoimostObucheniya * kurs * 2 - oplacheno;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString()+ "\r\n"
+                +"Обучение на платной основе \r\n"
+                +"Стоимость обучения: "+stoimostObucheniya+"руб.\r\n"
+                +"Задолжность: "+Dolg()+ "руб.";
+        
         }
     }
 

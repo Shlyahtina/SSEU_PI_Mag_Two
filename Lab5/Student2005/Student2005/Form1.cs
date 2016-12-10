@@ -463,22 +463,21 @@ namespace Student2005
         {
             if (student is StudentPlat) 
             {
-                //то установить стоимость обучения
-                textBoxStudentInfo.Text = student.ToString;
+                (student as StudentPlat).stoimostObucheniya = numericUpDownStoimost.Value;
+                textBoxStudentInfo.Text = student.ToString();
             }
 
         }
 
         private void buttonOplatit_Click(object sender, EventArgs e)
         {
-            if (strudent is StudentPlat) 
+            if (student is StudentPlat) 
             {
-                (student as StudentPlat).stoimostObucheniya = numericUpDownSum.Value;
+                (student as StudentPlat).OplatitObuchenie(numericUpDownSum.Value);
                 textBoxStudentInfo.Text = student.ToString();
             }
 
         }
-
-       
+      
     }
 }
