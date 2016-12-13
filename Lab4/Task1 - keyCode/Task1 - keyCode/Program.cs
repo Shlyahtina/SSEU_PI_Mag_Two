@@ -13,7 +13,8 @@ namespace Task1___keyCode
 
             char key;
             Console.WriteLine("Нажмите клавишу");
-            char.TryParse(Console.ReadLine(), out key);
+            key=Console.ReadKey().KeyChar;
+            Console.WriteLine("\n");
             int code;
             code = Convert.ToInt32(key);
             Console.WriteLine(code);
