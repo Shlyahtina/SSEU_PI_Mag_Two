@@ -57,7 +57,7 @@ namespace Student2005
         
 
         //перевести на следующий курс
-        public void perevestiNaSledKurs()
+        public virtual void perevestiNaSledKurs()
         {
                 Kurs += 1;
         }
@@ -170,6 +170,15 @@ namespace Student2005
             return 0; //недопустимый семестр - нет стипендии
         }
 
+        public override void PerevestiNaSledKurs() 
+        {
+            if (KolNesdach(KolvoSemestrov()) < 3) 
+            {
+                base.perevestiNaSledKurs();
+            };
+        
+        }
+
         public override string ToString() 
         {
             //формируем запись о стипендии за каждый семестр
@@ -207,10 +216,32 @@ namespace Student2005
             oplacheno += sum;
         }
         // задолженность за обучсение (или переплата, если отрицательное)
+
+        //оплатить обучение по числу семестров
+        public void OplatitObuchenie(int kolvoSemestrov)
+        {
+            //прибавляем к оплаченной сумме число семестров * стоимость за семестр
+            oplacheno += kolvoSemestrov * stoimostObucheniya;
+        }
+
+        //оплатить обучение полностью
+        public void OplatitObuchenie()
+        {
+            //выплатить весь долг
+            oplacheno += Dolg();
+        }
         public decimal Dolg()
         {
             //долг = стоимость обучения за семестр * кол-во семестров - оплачено
             return stoimostObucheniya * KolvoSemestrov() - oplacheno;
+        }
+
+        public override void perevestiNaSledKurs()
+        {
+            if (Dolg() == 0)
+            {
+                base.perevestiNaSledKurs();
+            };
         }
 
         public override string ToString()
